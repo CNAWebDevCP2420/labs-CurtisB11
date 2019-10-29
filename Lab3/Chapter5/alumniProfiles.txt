@@ -1,0 +1,5 @@
+Jane Doe, She was angry this day., images/woman1small.jpg
+Julia Roberts, She was always happy., images/woman2small.jpg
+Linda Rogers, She wasn\'t always serious., images/woman3.jpg
+Jennifer Aniston, She was a quiet person., images/woman5small.jpg
+Sally White, She was a good student., images/woman4small.jpg

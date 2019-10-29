@@ -1,0 +1,3 @@
+Doe,John,35,10.25
+Williams,Jada,33,10.50
+Smith,Tosha,22,9.48

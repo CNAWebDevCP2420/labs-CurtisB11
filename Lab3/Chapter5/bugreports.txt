@@ -1,0 +1,7 @@
+Dell XPS 9550, laptop, windows, 2, Restart computer.
+iPad Air, tablet, ios, 6, Replace broken screen.
+MacBook Air, laptop, osx, 9, Reinstall Mac OS.
+iPhone 7, phone, ios, 3, Replace volume buttons.
+MacBook Pro, laptop, osx, 4, Make Preferences setting adjustment.
+Samsung Galaxy 10, phone, android, 10, Replace phone.
+iPad Professional, tablet, ios, 7, Needs software updates installed.
