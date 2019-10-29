@@ -56,7 +56,7 @@
 				echo "<p>Description:<br />\n<textarea name=\"item_description". $itemNumNoSpace ."\" rows=\"4\" style=\"width: 560px;\" readonly>". $item['itemDescription'] ."</textarea></p>\n";
 				echo "<p>Price:<br />\n<input type=\"text\" name=\"price". $itemNumNoSpace ."\" style=\"width: 100px;\" value=\"$". $item['itemPrice'] ."\" readonly />&nbsp;&nbsp;&nbsp;";
 				echo "&nbsp;&nbsp;&nbsp;\nQuantity: <input type=\"text\" style=\"width: 25px;\" name=\"quantity". $itemNumNoSpace ."\" value=\"". ${'TheQuantity'. $itemNumNoSpace} ."\" />&nbsp;&nbsp;&nbsp;";
-				echo "&nbsp;&nbsp;&nbsp;\n<input type=\"submit\" name=\"total". $itemNumNoSpace ."\" value=\"Check Total ". $item['itemNum'] ."\" />&nbsp;&nbsp;&nbsp;";
+				echo "&nbsp;&nbsp;&nbsp;\n<input type=\"submit\" name=\"total". $itemNumNoSpace ."\" value=\"Check Total Price\" />&nbsp;&nbsp;&nbsp;";
 				echo "&nbsp;&nbsp;&nbsp;\nTotal: <input type=\"text\" name=\"totalPrice". $itemNumNoSpace ."\" style=\"width: 100px;\" value=\"$". ${'finalPrice'. $itemNumNoSpace} ."\" readonly /></p><br />\n<hr />\n";
 			}
 		?>
