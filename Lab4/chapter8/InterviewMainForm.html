@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Interview Form</title>
+	<style>
+		input[type=text], input[type=date] {
+			margin: 5px 0 5px 20px;
+			font-size: 16px;
+			width: 200px;
+		}
+		.candidateDataBlocks {
+			padding: 20px 0 20px 20px;
+		}
+		select {
+			margin-top: 5px;
+   			font-size: 16px;
+		}
+		textarea {
+			margin-top: 5px;
+			font-size: 16px;
+		}
+		input[type=submit], input[type=reset] {
+			margin: 5px 0 50px 20px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Interview Data Form</h1>
+	<hr />
+	<p>Please ensure all fields are filled appropriately.</p>
+	<form method="post" action="InterviewProcessing.php">
+		<h3>Interviewer Section:</h3>
+		<p><label for="txtInterviewerFirstName"><input type="text" name="interviewerFirstName" id="txtInterviewerFirstName" /> Your First Name</label></p>
+		<p><label for="txtInterviewerLastName"><input type="text" name="interviewerLastName" id="txtInterviewerLastName" /> Your Last Name</label></p>
+		<p><label for="txtInterviewerPosition"><input type="text" name="interviewerPosition" id="txtInterviewerPosition" /> Your Job Title</label></p>
+		<p><label for="dteInterviewDate"><input type="date" name="interviewDate" id="dteInterviewDate" /> Date of This Interview</label></p>
+		<br />
+		<hr />
+		<br /><br />
+		<h3>Candidate Section:</h3>
+		<p><label for="txtCandidateFirstName"><input type="text" name="candidateFirstName" id="txtCandidateFirstName" /> First Name</label></p>
+		<p><label for="txtCandidateLastName"><input type="text" name="candidateLastName" id="txtCandidateLastName" /> Last Name</label></p>
+		<div class="candidateDataBlocks">
+			How would you rate the communication skills of this candidate?<br />
+			<div id="communicationSkills">
+				<select name="commSkills">
+					<option value="" selected>Choose answer...</option>
+					<option value="excel">Beyond Compare</option>
+					<option value="veryGood">Very Good</option>
+					<option value="good">Good / Mediocre</option>
+					<option value="needsWork">Needs Improvement</option>
+					<option value="poor">Poor</option>
+				</select>
+			</div>
+		</div>
+		<div class="candidateDataBlocks">
+			How would you rate the professional appearance of this candidate?<br />
+			<div id="professionalAppearance">
+				<select name="proAppearance">
+					<option value="" selected>Choose answer...</option>
+					<option value="excel">Beyond Compare</option>
+					<option value="veryGood">Very Good</option>
+					<option value="good">Good / Mediocre</option>
+					<option value="needsWork">Needs Improvement</option>
+					<option value="poor">Poor</option>
+				</select>
+			</div>
+		</div>
+		<div class="candidateDataBlocks">
+			How would you rate the computer skills of this candidate?<br />
+			<div id="computerSkills">
+				<select name="compSkills">
+					<option value="" selected>Choose answer...</option>
+					<option value="excel">Beyond Compare</option>
+					<option value="veryGood">Very Good</option>
+					<option value="good">Good / Mediocre</option>
+					<option value="needsWork">Needs Improvement</option>
+					<option value="poor">Poor</option>
+				</select>
+			</div>
+		</div>
+		<div class="candidateDataBlocks">
+			How would you rate the business knowledge of this candidate?<br />
+			<div id="businessKnowledge">
+				<select name="businessKnow">
+					<option value="" selected>Choose answer...</option>
+					<option value="excel">Beyond Compare</option>
+					<option value="veryGood">Very Good</option>
+					<option value="good">Good / Mediocre</option>
+					<option value="needsWork">Needs Improvement</option>
+					<option value="poor">Poor</option>
+				</select>
+			</div>
+		</div>
+		<div class="candidateDataBlocks">
+			Additional Comments:<br />
+			<textarea name="comments" id="txaComments" rows="4" cols="50"></textarea>
+		</div>
+		<input type="reset" name="resetForm" id="btnReset" value="Clear All Form Entries" />
+		<input type="submit" name="submitCandidate" id="btnSubmit" value="Submit Candidate Information" />
+	</form>
+	<h2>Choose your option below:</h2>
+	<p><a href="InterviewDisplayResults.php">view all candidate interviews</a></p>
+	<br />
+</body>
+</html>

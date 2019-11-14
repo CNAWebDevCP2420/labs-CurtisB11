@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Airline Survey | Main Form</title>
+	<script type="text/javascript">
+		function runDigitalClientTime(){
+			var clientTimeObject = new Date();
+			var clientHours = clientTimeObject.getHours();
+			var clientMinutes = clientTimeObject.getMinutes();
+			var clientDateOfMonth = clientTimeObject.getDate();
+			var clientMonthNumber = (clientTimeObject.getMonth() + 1);
+			var clientYear = clientTimeObject.getFullYear();
+			var currentTimeString = clientYear +"-"+ clientMonthNumber +"-"+ clientDateOfMonth +"T"+ clientHours +":"+ clientMinutes;
+			var dateControl = document.querySelector('input[type="datetime-local"]');
+			dateControl.value = currentTimeString.toString();
+		}
+	/*	
+		document.addEventListener("DOMContentLoaded", function(){
+		//	'use strict';
+			runDigitalClientTime();
+		}); */
+	</script>
+	<style type="text/css">
+		input[type="text"], input[type="datetime-local"] {
+			margin: 5px 0 5px 20px;
+			font-size: 16px;
+			width: 250px;
+		}
+		input[type="button"] {
+			margin-left: 20px;
+			font-size: 16px;
+		}
+		.RatingsAnswers {
+			padding: 20px 0 20px 20px;
+			font-size: 16px;
+		}
+		h4 {
+			margin-bottom: 5px;
+		}
+		input[type="radio"] {
+			margin-left: 30px;
+		}
+		input[type="submit"], input[type="reset"] {
+			margin: 5px 0 50px 20px;
+			font-size: 16px;
+		}
+		a {
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body onload="runDigitalClientTime();">
+	<h1>Airline Survey</h1><hr />
+	<form method="post" action="AirlineSurveyProcessing.php">
+		<h3>Please ensure all fields are filled appropriately.</h3>
+		<p>
+			<label for="dtpForFlight"><input type="datetime-local" name="flightTimeDate" id="dtpForFlight" /> Date and Time of Flight</label>
+			<input type="button" name="updateTime" value="Get Current Computer Time" onClick="runDigitalClientTime();" />
+		</p>
+		<p><label for="txtFlightNumber"><input type="text" name="flightNumber" id="txtFlightNumber" /> Flight Number</label></p>
+		<p><label for="txtAirline"><input type="text" name="airline" id="txtAirline" /> Name of Airline</label></p>
+		<br />
+		<hr />		
+		<div class="RatingsAnswers">
+			<h3>How Would You Rate the Following:</h3>
+			<h4>The Friendliness of Customer Staff:</h4>
+	<!--		<div class="answerInputs"> -->
+				<label for="radFriendlyExcel"><input type="radio" name="friendliness" id="radFriendlyExcel" value="excel" /> Excellent</label><br />
+				<label for="radFriendlyGood"><input type="radio" name="friendliness" id="radFriendlyGood" value="good" /> Good</label><br />
+				<label for="radFriendlyFair"><input type="radio" name="friendliness" id="radFriendlyFair" value="fair" /> Fair</label><br />
+				<label for="radFriendlyPoor"><input type="radio" name="friendliness" id="radFriendlyPoor" value="poor" /> Poor</label><br />
+				<label for="radFriendlyNoOpin"><input type="radio" name="friendliness" id="radFriendlyNoOpin" value="noOpin" /> No Opinion</label>
+	<!--		</div> -->
+		</div>
+		<div class="RatingsAnswers">
+			<h4>Space for Luggage Storage:</h4>
+			<div class="answerInputs">
+				<label for="radSpaceExcel"><input type="radio" name="space" id="radSpaceExcel" value="excel" /> Excellent</label><br />
+				<label for="radSpaceGood"><input type="radio" name="space" id="radSpaceGood" value="good" /> Good</label><br />
+				<label for="radSpaceFair"><input type="radio" name="space" id="radSpaceFair" value="fair" /> Fair</label><br />
+				<label for="radSpacePoor"><input type="radio" name="space" id="radSpacePoor" value="poor" /> Poor</label><br />
+				<label for="radSpaceNoOpin"><input type="radio" name="space" id="radSpaceNoOpin" value="noOpin" /> No Opinion</label>
+			</div>
+		</div>
+		<div class="RatingsAnswers">
+			<h4>Comfort of Seating:</h4>
+			<div class="answerInputs">
+				<label for="radComfortExcel"><input type="radio" name="comfort" id="radComfortExcel" value="excel" /> Excellent</label><br />
+				<label for="radComfortGood"><input type="radio" name="comfort" id="radComfortGood" value="good" /> Good</label><br />
+				<label for="radComfortFair"><input type="radio" name="comfort" id="radComfortFair" value="fair" /> Fair</label><br />
+				<label for="radComfortPoor"><input type="radio" name="comfort" id="radComfortPoor" value="poor" /> Poor</label><br />
+				<label for="radComfortNoOpin"><input type="radio" name="comfort" id="radComfortNoOpin" value="noOpin" /> No Opinion</label>
+			</div>
+		</div>
+		<div class="RatingsAnswers">
+			<h4>Cleanliness of Aircraft:</h4>
+			<div class="answerInputs">
+				<label for="radCleanExcel"><input type="radio" name="clean" id="radCleanExcel" value="excel" /> Excellent</label><br />
+				<label for="radCleanGood"><input type="radio" name="clean" id="radCleanGood" value="good" /> Good</label><br />
+				<label for="radCleanFair"><input type="radio" name="clean" id="radCleanFair" value="fair" /> Fair</label><br />
+				<label for="radCleanPoor"><input type="radio" name="clean" id="radCleanPoor" value="poor" /> Poor</label><br />
+				<label for="radCleanNoOpin"><input type="radio" name="clean" id="radCleanNoOpin" value="noOpin" /> No Opinion</label>
+			</div>
+		</div>
+		<div class="RatingsAnswers">
+			<h4>Noise Level of Aircraft:</h4>
+			<div class="answerInputs">
+				<label for="radNoiseExcel"><input type="radio" name="noise" id="radNoiseExcel" value="excel" /> Excellent</label><br />
+				<label for="radNoiseGood"><input type="radio" name="noise" id="radNoiseGood" value="good" /> Good</label><br />
+				<label for="radNoiseFair"><input type="radio" name="noise" id="radNoiseFair" value="fair" /> Fair</label><br />
+				<label for="radNoisePoor"><input type="radio" name="noise" id="radNoisePoor" value="poor" /> Poor</label><br />
+				<label for="radNoiseNoOpin"><input type="radio" name="noise" id="radNoiseNoOpin" value="noOpin" /> No Opinion</label>
+			</div>
+		</div>
+		<input type="reset" name="resetForm" id="btnReset" value="Clear All Form Entries" />
+		<input type="submit" name="submitAirSurvey" id="btnSubmit" value="Submit Airline Survey" />
+	</form>
+	<p><a href="AirlineSurveyViewer.php">view all airline surveys</a></p>
+	<br />
+</body>
+</html>

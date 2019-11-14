@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Create New Bug Report</title>
+</head>
+
+<body>
+	<h1>The Bug Reporting Portal</h1><hr />
+	<h2>Enter information below to create a new Bug Report</h2>
+	<form method="POST" action="BugReportCh8Create.php">
+		<p>Product Name and Version <input type="text" name="product_name" /></p>
+		<p>
+			Type of Hardware
+			<select name="hardware_type">
+				<option value="" selected="selected">choose below...</option>
+				<option value="desktop">Desktop Computer</option>
+				<option value="laptop">Laptop Computer</option>
+				<option value="tablet">Tablet</option>
+				<option value="phone">Mobile Phone</option>
+			</select>
+		</p>
+		<p>
+			Operating System
+			<select name="operating_system">
+				<option value="" selected="selected">choose below...</option>
+  				<option value="windows">Windows</option>
+  				<option value="osx">Mac OS</option>
+  				<option value="linux">Linux</option>
+  				<option value="ios">iOS</option>
+				<option value="android">Android</option>
+			</select>
+		</p>
+		<p>Frequency of Occurance <input type="text" name="frequency" /></p>
+		<p>Proposed Solutions <textarea name="solutions" rows="4" cols="50"></textarea></p>
+		<p><input type="submit" name="createNewReport" value="Create NEW Bug Report" /></p>
+	</form>
+	<p><a href="BugReportCh8MainPage.html">home</a></p>
+	<p><a href="BugReportCh8Edit.php">edit a bug report</a></p>
+	<p><a href="BugReportCh8View.php">view all bug reports</a></p>
+</body>
+</html>
